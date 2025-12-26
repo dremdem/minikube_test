@@ -39,11 +39,12 @@ docker build \
 ```
 
 §
-## apply deployment and service
+## apply deployment and service, configmap
 
 ```
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
+kubectl apply -f configmap.yaml
 ```
 
 ## service access
