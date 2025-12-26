@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: demo-api
 spec:
-  replicas: 1
+  replicas: 7
   selector:
     matchLabels:
       app: demo-api
@@ -21,4 +21,4 @@ spec:
             - containerPort: 8000
           env:
             - name: APP_VERSION
-            - "3.0"
+              value: "1.8"
