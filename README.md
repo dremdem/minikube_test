@@ -35,11 +35,10 @@ eval $(minikube -p minikube docker-env)
 
 ```
 docker build \
-  --build-arg APP_VERSION=1.0 \
   -t demo-api:latest .
 ```
 
-
+§
 ## apply deployment and service
 
 ```
@@ -51,6 +50,12 @@ kubectl apply -f service.yaml
 
 ```
 minikube service demo-api
+```
+
+## watch for endpoint
+
+```
+watch -n 0.1 curl http://127.0.0.1:51889/
 ```
 
 
@@ -78,3 +83,4 @@ eval $(minikube docker-env -u)
 ```
 minikube stop
 ```
+
