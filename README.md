@@ -38,13 +38,13 @@ docker build \
   -t demo-api:latest .
 ```
 
-§
-## apply deployment and service, configmap
+## apply deployment and service, configmap, secret
 
 ```
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 kubectl apply -f configmap.yaml
+kubectl apply -f secret.yaml
 ```
 
 ## service access
