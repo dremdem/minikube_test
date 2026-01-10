@@ -31,6 +31,12 @@ minikube start --driver=docker
 eval $(minikube -p minikube docker-env)
 ```
 
+## get all
+
+```
+kubectl get all
+```
+
 ## build an image for minikube
 
 ```
@@ -77,6 +83,44 @@ kubectl rollout restart deployment/demo-api
 
 ```
 eval $(minikube docker-env -u)
+```
+
+## namespaces
+
+### create
+
+```
+kubectl create namespace dev
+```
+
+### list 
+
+```
+kubectl get namespaces
+```
+
+### make default 
+
+```
+kubectl config set-context --current --namespace=dev
+```
+
+### get all in all namespaces
+
+```
+kubectl get all -A
+```
+
+### apply everything inside the overlays/prod
+
+```
+kubectl apply -k overlays/prod
+```
+
+### get pods for dev namespace
+
+```
+kubectl get pods -n dev
 ```
 
 ## stop minikube (not delete!)

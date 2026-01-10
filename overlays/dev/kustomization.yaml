@@ -1,0 +1,13 @@
+namespace: dev
+
+resources:
+  - ../../base
+  - namespace.yaml  
+
+secretGenerator:
+  - name: app-secret
+    envs:
+      - .env
+
+generatorOptions:
+  disableNameSuffixHash: true
